@@ -1,0 +1,15 @@
+package agentesC;
+
+import jade.core.Agent;
+
+
+public class Agente2 extends Agent{
+    
+    @Override
+    protected void setup(){
+        System.out.println(getName());
+        blockingReceive();//para bloquear agente
+        
+    }
+    
+}
