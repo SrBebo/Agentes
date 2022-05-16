@@ -1,0 +1,13 @@
+package agentesC;
+
+import jade.core.Agent;
+
+
+public class Agente1 extends Agent {
+    
+    @Override
+    protected void setup(){//el agente siempre va a ejecutar esta parte primero, siempre, sin esto no se hará nada
+        System.out.println(getName());    
+        
+    }
+}
