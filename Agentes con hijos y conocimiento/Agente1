@@ -32,7 +32,7 @@ public class Agente1 extends Agent {
         @Override
         public void action() {
             System.out.println(getName()); 
-            doDelete();//elimino el agente 
+            doDelete();//elimino el agente, si elimino el agente, se crean hijos infinitos 
         }
 
         @Override
