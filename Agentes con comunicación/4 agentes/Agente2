@@ -45,17 +45,13 @@ public class Agente2 extends Agent{
                     Mensajes.enviar(ACLMessage.INFORM, "Agente4", "Se envio mensaje agente 4", "COD0204", getAgent());
                 }
             }
-            
-          
-            System.out.println("");
-            System.out.println("El contador es:"+contador);
+           
             System.out.println("");
             if(idC.equalsIgnoreCase("COD0402")){
-                        System.out.println(msj.getContent());
-                        System.out.println(msj.getConversationId());
-                        System.out.println("Se recibio el mensaje de agente 4");
-                        System.out.println("");
-                        contador=0;
+                System.out.println(msj.getContent());
+                System.out.println(msj.getConversationId());
+                System.out.println("");
+                contador=0;
             }
             
             
