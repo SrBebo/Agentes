@@ -23,16 +23,17 @@ public class Agente4 extends Agent {
         @Override
         public void action() {
             System.out.println(getName()); 
-            ACLMessage msj= blockingReceive();
             
-            //if(acl.equalsIgnoreCase("COD0204")){    
-               Mensajes.enviar(ACLMessage.INFORM, "Emisor", "Soy el agente 4", "COD0402", getAgent());
-               System.out.println(msj.getContent());
-               System.out.println(msj.getConversationId());
-            //}
-           
-            //blockingReceive();
-           
+            ACLMessage msj= blockingReceive();
+            String idC=msj.getConversationId();
+       
+            if(idC.equalsIgnoreCase("COD0204")){
+                Mensajes.enviar(ACLMessage.INFORM, "Emisor", "Soy el agente 4", "COD0402", getAgent());
+                System.out.println(msj.getContent());
+                System.out.println(msj.getConversationId());
+                System.out.println("");
+            }
+            blockingReceive();
         }
 
         @Override
@@ -43,3 +44,4 @@ public class Agente4 extends Agent {
     }
     
 }
+
