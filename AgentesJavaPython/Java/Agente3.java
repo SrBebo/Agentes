@@ -26,7 +26,7 @@ public class Agente3 extends Agent {
         public void action() {
             try {
                 
-               
+                GUIExample1 gui = (GUIExample1)getArguments()[0];
                 ACLMessage msj = blockingReceive();//recibimos el mensaje que fue enviado hacia este AG3
                 System.out.println("El mensaje enviado desde AG2 hacia AG2 ha sido recibido");//confirmamos que el AG3 recibio el mensaje
                 Carro carro = (Carro)msj.getContentObject();//creamos un objeto carro y lo igualamos a los valores recibidos en el mensaje
